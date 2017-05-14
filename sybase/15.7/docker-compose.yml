@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sybase:
+    container_name: sybase
+    image: sybase:15.7
+    hostname: dksybase
+    build: .
+    ports:
+      - "25000:5000"
+    environment: 
+      - SYBASE_USER=guest

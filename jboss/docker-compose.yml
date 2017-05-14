@@ -1,0 +1,12 @@
+version : '3'
+services :
+  jboss:
+    container_name: jboss-eap
+    image: jboss-eap:7
+    build: .
+    environment: 
+      - JBOSS_USER=admin
+      - JBOSS_PASSW0RD=Admin#007
+    ports:
+      - "28080:8080"
+      - "29990:9990"
